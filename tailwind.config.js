@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        wak: ['"Wak"', "sans-serif"],
+        gillSans: ['"Gill Sans"', "sans-serif"],
+      },
+      colors: {
+        cream: "#FFF0E1",
+        "deep-green": "#005B41",
+        "custom-orange": "#FF8F00",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

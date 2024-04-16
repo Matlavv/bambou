@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Wak";
+  src: url("/fonts/wak-light.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wak";
+  src: url("/fonts/wak-medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("/fonts/gill-sans1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("/fonts/gill-sans-2.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
