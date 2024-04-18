@@ -1,4 +1,5 @@
 import AppPresentation from "@/components/AppPresentation";
+import GoToAction from "@/components/GoToAction";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Header />
       <AppPresentation />
+      <GoToAction />
     </div>
   );
 }
