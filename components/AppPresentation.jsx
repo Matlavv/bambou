@@ -16,7 +16,7 @@ const AppPresentation = () => {
           </p>
           <button
             href="#newsletter"
-            className="bg-custom-orange text-deep-green font-bold rounded-full px-4 py-2 my-4 mt-10 text-lg lg:text-xl"
+            className="bg-custom-orange text-deep-green font-gillSans rounded-full px-4 py-2 my-4 mt-10 text-lg lg:text-xl"
           >
             Suivre l&apos;avancement de Bambou
           </button>
