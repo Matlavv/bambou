@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const AppPresentation = () => {
   return (
-    <div className="grid lg:grid-cols-4">
-      {/* green container - prend 3/4 de l'écran sur large écrans */}
-      <div className="lg:col-span-3 bg-deep-green mx-5 my-4 rounded-xl">
+    <div className="relative grid lg:grid-cols-4 z-0">
+      {/* Green container - prend 3/4 de l'écran sur grands écrans */}
+      <div className="lg:col-span-3 bg-deep-green mx-5 my-4 rounded-xl z-10">
         <div className="p-8">
           <h1 className="font-wak font-bold text-cream text-5xl lg:text-7xl my-4">
             L&apos;app qui récompense tes actions écolos !
@@ -22,8 +22,17 @@ const AppPresentation = () => {
           </button>
         </div>
       </div>
-      {/* img container - prend 1/4 de l'écran sur large écrans */}
-      <div className="relative lg:col-span-1 hidden lg:block mx-5 my-4 rounded-xl">
+      {/* Panda Badge - à repositionner entre les zones */}
+      <div className="absolute lg:-bottom-16 lg:right-1/4 z-20">
+        <Image
+          src={"/img/pandaReady.png"}
+          width={200}
+          height={200}
+          alt="panda badge"
+        />
+      </div>
+      {/* Image container - prend 1/4 de l'écran sur grands écrans */}
+      <div className="relative lg:col-span-1 hidden lg:block mx-5 my-4 rounded-xl z-10">
         <Image
           src={"/img/bambouForest.png"}
           width={320}

@@ -1,7 +1,7 @@
 const GoToAction = () => {
   return (
     <div>
-      <p>cc</p>
+      <p className="font-bold">cc</p>
     </div>
   );
 };
