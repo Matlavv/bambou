@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const EcologicalLearning = () => {
   return (
     <div className="mt-8 p-10">
@@ -6,11 +8,11 @@ const EcologicalLearning = () => {
       </h2>
       <div className="grid lg:grid-cols-2 mt-12 gap-4">
         {" "}
-        <div className="lg:w-2/3 mt-4 p-4">
-          <h3 className="text-2xl text-deep-green font-gillSans">
+        <div className="lg:w-2/3 mt-6 p-4">
+          <h3 className="text-2xl text-deep-green font-gillSans max-sm:text-center">
             Nous t’aidons à adopter un mode de vie plus écologique
           </h3>
-          <p className="text-lg text-deep-green font-gillSans font-bold mt-5">
+          <p className="text-lg text-deep-green font-gillSans font-bold mt-5 max-sm:text-center">
             Explore nos articles et conseils pour adopter des habitudes de vie
             plus durables. Que tu sois novice dans le domaine de l&apos;écologie
             ou que tu cherches des moyens d&apos;approfondir ton engagement, tu
@@ -19,20 +21,32 @@ const EcologicalLearning = () => {
           </p>
         </div>
         <div className="lg:flex lg:flex-row lg:space-x-4">
-          <div className="rounded-xl bg-red-600 lg:w-1/2 h-80 flex flex-col justify-end p-4 my-4 relative">
-            <p className="text-cream font-gillSans font-bold z-10 relative">
-              Des recettes éco-friendly pour une alimentation durable
-            </p>
+          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+            <Image
+              src={"/img/ARTICLE-COVER1.png"}
+              height={250}
+              width={250}
+              alt="article"
+              className="rounded-xl"
+            />
           </div>
-          <div className="rounded-xl bg-yellow-600 lg:w-1/2 h-80 flex flex-col justify-end p-4 my-4 relative">
-            <p className="text-deep-green font-gillSans font-bold z-10 relative">
-              Réduits ta consommation plastique !
-            </p>
+          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+            <Image
+              src={"/img/ARTICLE-COVER2.png"}
+              height={250}
+              width={250}
+              alt="article"
+              className="rounded-xl"
+            />
           </div>
-          <div className="rounded-xl bg-deep-green lg:w-1/2 h-80 flex flex-col justify-end p-4 my-4 relative">
-            <p className="text-cream font-gillSans font-bold z-10 relative">
-              Guide pour un jardinage écologique
-            </p>
+          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+            <Image
+              src={"/img/ARTICLE-COVER3.png"}
+              height={250}
+              width={250}
+              alt="article"
+              className="rounded-xl"
+            />
           </div>
         </div>
       </div>

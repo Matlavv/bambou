@@ -18,22 +18,22 @@ const GoToAction = () => {
           alt="tree planting"
           className="justify-self-center"
         />
-        <div className="w-3/4">
-          <h3 className="text-deep-green font-gillSans text-2xl">
+        <div className="lg:w-3/4">
+          <h3 className="text-deep-green font-gillSans text-2xl max-sm:text-center">
             Participe à des évènements écologiques
           </h3>
-          <p className="text-lg text-deep-green font-gillSans my-4 font-bold">
+          <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
             Prêt à passer à l&apos;action pour un monde plus vert ?
           </p>
-          <p className="text-lg text-deep-green font-gillSans font-bold">
+          <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
             Rejoins des événements écologiques passionnants organisés par des
             membres de notre communauté !
           </p>
-          <p className="text-lg text-deep-green font-gillSans font-bold">
+          <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
             Que ce soit un nettoyage de plage, une randonnée écolo ou un atelier
             de recyclage, chaque action compte.
           </p>
-          <p className="text-lg text-deep-green font-gillSans my-4 font-bold">
+          <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
             Trouve des événements près de chez toi et rejoins-nous pour faire
             une réelle différence ensemble !
           </p>
@@ -42,13 +42,13 @@ const GoToAction = () => {
       {/* Second image container */}
       <div className="grid lg:grid-cols-2 gap-10 p-8 items-center">
         <div className="lg:w-3/4 justify-self-end">
-          <h3 className="text-deep-green font-gillSans text-2xl">
+          <h3 className="text-deep-green font-gillSans text-2xl max-sm:text-center">
             Organise ton propre évènement !
           </h3>
-          <p className="text-lg text-deep-green font-gillSans my-4 font-bold">
+          <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
             Tu as une super idée pour un évènement écologique ? Génial !
           </p>
-          <p className="text-lg text-deep-green font-gillSans font-bold">
+          <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
             Avec Bambou, une fois ton profil certifié, tu peux facilement
             planifier et promouvoir ton propre évènement pour rassembler la
             communauté et faire une réelle différence !

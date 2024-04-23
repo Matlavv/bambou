@@ -1,43 +1,55 @@
-import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 
 const JoinNewsletter = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [email, setEmail] = useState("");
-  const [checkboxClass, setCheckboxClass] = useState("accent-deep-green");
+  const [error, setError] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
-    // Reset the checkbox class to its default when checked/unchecked
-    setCheckboxClass("accent-deep-green");
+    setError(false);
+    setSuccessMessage("");
   };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+    setError(false);
+    setSuccessMessage("");
+  };
+
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
   };
 
   const handleSubmit = () => {
-    if (!isChecked) {
-      // Set the checkbox class to a red color if not checked
-      setCheckboxClass("accent-red-500 ring-2 ring-red-500");
+    if (!isChecked || !isValidEmail(email)) {
+      setError(true);
+      setSuccessMessage("");
     } else {
-      // submission action
+      setSuccessMessage("Merci de nous avoir rejoint !");
+      setError(false);
+      console.log("Soumission réussie avec l'email :", email);
     }
   };
 
+  const inputClass = `placeholder-deep-green rounded-xl p-2 bg-cream text-sm w-full lg:w-2/3 font-gillSans ${
+    error ? "border-red-500 border-2" : ""
+  }`;
+
   return (
     <div className="bg-deep-green mx-6 my-4 rounded-xl p-4" id="newsletter">
-      <h2 className="flex items-center justify-center text-cream font-wak font-bold text-5xl">
+      <h2 className="flex items-center justify-center text-cream font-bold text-5xl font-wak max-sm:text-center">
         Ne rate aucune info sur Bambou !
       </h2>
       <div className="lg:flex lg:flex-row mt-6">
         <div className="mt-4">
-          <p className="text-cream font-gillSans font-bold text-lg">
+          <p className="text-cream font-gillSans font-bold text-lg max-sm:text-center">
             Ne rate aucune information sur nos dernières initiatives, événements
             à venir et astuces écologiques en t&apos;abonnant à notre
             newsletter.
           </p>
-          <p className="text-cream font-gillSans font-bold text-lg mt-3">
+          <p className="text-cream font-gillSans font-bold text-lg mt-3 max-sm:text-center">
             Rejoins notre communauté et cultivons ensemble un avenir plus vert !
           </p>
         </div>
@@ -47,33 +59,44 @@ const JoinNewsletter = () => {
             placeholder="Ton adresse mail"
             value={email}
             onChange={handleEmailChange}
-            className="placeholder-deep-green rounded-lg p-2 bg-cream font-gillSans font-bold text-sm w-full lg:w-2/3"
+            className={inputClass}
             style={{ color: "deep-green" }}
           />
           <div className="flex items-center mt-4">
-            <Checkbox
-              id="subscribeCheckbox"
+            <input
+              type="checkbox"
               checked={isChecked}
               onChange={handleCheckboxChange}
-              className={`${checkboxClass} form-checkbox h-6 w-6 rounded-full border-2 border-cream`}
+              id="subscribeCheckbox"
+              className={`form-checkbox size-6 ${
+                error
+                  ? "accent-red-500 ring-2 ring-red-500"
+                  : "accent-deep-green"
+              }`}
               style={{
-                backgroundColor: "transparent", // Makes the checkbox background transparent
-                accentColor: "cream", // This sets the checkbox color when checked
+                backgroundColor: "transparent",
+                accentColor: "cream",
               }}
             />
-
             <label
               htmlFor="subscribeCheckbox"
-              className="text-cream font-gillSans font-bold text-sm ml-2"
+              className={`font-bold text-sm ml-2  ${
+                error ? "text-red-500" : "text-cream"
+              }`}
             >
               En t&apos;inscrivant à notre newsletter, tu consens à recevoir des
               mises à jour sur nos initiatives et événements. Tu peux te
               désabonner à tout moment.
             </label>
           </div>
+          {successMessage && (
+            <p className="text-cream font-gillSans font-bold text-lg mt-3">
+              {successMessage}
+            </p>
+          )}
           <button
             onClick={handleSubmit}
-            className="bg-custom-orange text-deep-green font-gillSans rounded-full px-4 py-2 my-4 text-lg lg:text-xl"
+            className="bg-custom-orange text-deep-green rounded-full px-4 py-2 my-4 text-lg lg:text-xl font-gillSans max-sm:ml-6"
           >
             S&apos;inscrire à la newsletter
           </button>
