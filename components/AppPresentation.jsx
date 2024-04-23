@@ -25,12 +25,13 @@ const AppPresentation = () => {
         </div>
       </div>
       {/* Panda Badge */}
-      <div className="absolute lg:bottom-1/2 lg:left-3/4 transform lg:-translate-x-1/2 lg:translate-y-full z-20 rotate-12">
+      <div className="absolute lg:top-0 lg:bottom-1/2 lg:left-3/4 transform lg:-translate-x-2/3 lg:translate-y-full z-20 rotate-12 -top-6 -left-4">
         <Image
           src={"/img/pandaReady.png"}
           width={200}
           height={200}
           alt="panda badge"
+          className="max-lg:size-32"
         />
       </div>
       {/* Image container - prend 1/4 de l'écran sur grands écrans */}
