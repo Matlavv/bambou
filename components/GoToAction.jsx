@@ -40,7 +40,7 @@ const GoToAction = () => {
         </div>
       </div>
       {/* Second image container */}
-      <div className="grid lg:grid-cols-2 gap-10 p-10 items-center lg:mt-5">
+      <div className="grid lg:grid-cols-2 gap-10 p-8 items-center">
         <div className="lg:w-3/4 justify-self-end">
           <h3 className="text-deep-green font-gillSans text-2xl">
             Organise ton propre évènement !

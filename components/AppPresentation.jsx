@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AppPresentation = () => {
   return (
-    <div className="relative grid lg:grid-cols-4 z-0">
+    <div className="relative grid lg:grid-cols-4 z-0 lg:p-10">
       {/* Green container - prend 3/4 de l'écran sur grands écrans */}
       <div className="lg:col-span-3 bg-deep-green mx-5 my-4 rounded-xl z-10">
         <div className="p-8">

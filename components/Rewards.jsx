@@ -3,9 +3,9 @@ import Image from "next/image";
 const Rewards = () => {
   return (
     // gagne des récompenses
-    <div className="flex flex-row m-5 p-8 rounded-xl bg-deep-green">
+    <div className="lg:flex lg:flex-row m-5 p-8 rounded-xl bg-deep-green items-center justify-center mt-10">
       {/* panda image */}
-      <div>
+      <div className="flex-shrink-0">
         <Image
           src={"/img/pandaSurprise.png"}
           width={200}
@@ -14,15 +14,16 @@ const Rewards = () => {
         />
       </div>
       {/* Text part */}
-      <div>
-        <h2 className="text-cream text-3xl font-wak font-bold">
+      <div className="flex flex-col justify-center lg:ml-24">
+        {" "}
+        <h2 className="text-cream text-4xl lg:text-5xl font-wak font-bold">
           Gagne des récompenses !
         </h2>
-        <p className="text-cream text-xl font-gillSans">
+        <p className="text-cream text-xl font-gillSans mt-5">
           Plus tu t&apos;impliques, plus tu gagnes !
         </p>
-        <p className="text-cream text-lg font-gillSans font-bold">
-          En particiant à des événements écologiques, tu gagnes des points qui
+        <p className="text-cream text-lg font-gillSans font-bold mt-6">
+          En participant à des événements écologiques, tu gagnes des points qui
           peuvent être échangés contre des bons d&apos;achat chez nos
           partenaires ou même être convertis en dons pour des associations
           environnementales.
