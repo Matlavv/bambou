@@ -3,9 +3,9 @@ import Image from "next/image";
 const GoToAction = () => {
   return (
     <div className="grid mt-10 justify-items-center">
-      {/* title */}
+      {/* Title */}
       <div className="flex items-center justify-center">
-        <h2 className="flex text-5xl lg:text-6xl text-deep-green font-bold font-wak">
+        <h2 className="text-5xl lg:text-6xl text-deep-green font-bold font-wak">
           Passe à l&apos;action !
         </h2>
       </div>
@@ -22,45 +22,48 @@ const GoToAction = () => {
           <h3 className="text-deep-green font-gillSans text-2xl max-sm:text-center">
             Participe à des évènements écologiques
           </h3>
+          {/* Event description */}
           <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
             Prêt à passer à l&apos;action pour un monde plus vert ?
           </p>
-          <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
-            Rejoins des événements écologiques passionnants organisés par des
-            membres de notre communauté !
-          </p>
+          {/* More details */}
           <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
             Que ce soit un nettoyage de plage, une randonnée écolo ou un atelier
             de recyclage, chaque action compte.
           </p>
-          <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
-            Trouve des événements près de chez toi et rejoins-nous pour faire
-            une réelle différence ensemble !
-          </p>
         </div>
       </div>
       {/* Second image container */}
-      <div className="grid lg:grid-cols-2 gap-10 p-8 items-center">
+      <div className="grid lg:grid-cols-2 gap-10 p-8 items-center relative">
         <div className="lg:w-3/4 justify-self-end">
           <h3 className="text-deep-green font-gillSans text-2xl max-sm:text-center">
             Organise ton propre évènement !
           </h3>
           <p className="text-lg text-deep-green font-gillSans my-4 font-bold max-sm:text-center">
-            Tu as une super idée pour un évènement écologique ? Génial !
-          </p>
-          <p className="text-lg text-deep-green font-gillSans font-bold max-sm:text-center">
             Avec Bambou, une fois ton profil certifié, tu peux facilement
-            planifier et promouvoir ton propre évènement pour rassembler la
-            communauté et faire une réelle différence !
+            planifier et promouvoir ton propre évènement.
           </p>
         </div>
-        <Image
-          src={"/img/sea-cleaning.png"}
-          width={500}
-          height={500}
-          alt="Sea cleaning"
-          className="lg:ml-5"
-        />
+        <div className="relative">
+          {/* Image of sea cleaning */}
+          <Image
+            src={"/img/sea-cleaning.png"}
+            width={500}
+            height={500}
+            alt="Sea cleaning"
+            className="lg:ml-5"
+          />
+          {/* Panda Badge */}
+          <div className="absolute top-0 left-0 transform -translate-x-1/4 -translate-y-1/4 -rotate-12">
+            <Image
+              src={"/img/pandaStrong.png"}
+              width={150}
+              height={150}
+              alt="panda badge"
+              className="max-md:size-20"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
