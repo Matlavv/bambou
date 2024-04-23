@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const AppPresentation = () => {
   return (
-    <div className="relative grid lg:grid-cols-4 z-0 lg:p-16 ">
+    <div className="relative grid lg:grid-cols-4 z-0 lg:p-16">
       {/* Green container - prend 3/4 de l'écran sur grands écrans */}
       <div className="lg:col-span-3 bg-deep-green mx-5 my-4 rounded-xl z-10">
         <div className="p-8">
@@ -16,18 +16,16 @@ const AppPresentation = () => {
             contribuant à un monde plus durable pour les générations futures !
           </p>
           <div className="mt-10">
-            <Link
-              href="#newsletter"
-              passHref
-              className="bg-custom-orange text-deep-green font-gillSans rounded-full lg:px-4 px-2 py-2 text-base lg:text-xl"
-            >
-              Suivre l&apos;avancement de Bambou
+            <Link href="#newsletter">
+              <button className="bg-custom-orange text-deep-green font-gillSans rounded-full lg:px-4 px-2 py-2 text-base lg:text-xl">
+                Suivre l&apos;avancement de Bambou
+              </button>
             </Link>
           </div>
         </div>
       </div>
-      {/* Panda Badge - à repositionner entre les zones */}
-      <div className="absolute lg:-bottom-16 lg:right-1/4 z-20">
+      {/* Panda Badge */}
+      <div className="absolute lg:bottom-1/2 lg:left-3/4 transform lg:-translate-x-1/2 lg:translate-y-full z-20 rotate-12">
         <Image
           src={"/img/pandaReady.png"}
           width={200}
@@ -36,7 +34,7 @@ const AppPresentation = () => {
         />
       </div>
       {/* Image container - prend 1/4 de l'écran sur grands écrans */}
-      <div className="relative lg:col-span-1 hidden lg:block mx-5 my-4 rounded-xl z-10">
+      <div className="relative lg:col-span-1 hidden lg:block mx-9 my-4 rounded-xl z-10">
         <Image
           src={"/img/bambouForest.png"}
           width={320}
