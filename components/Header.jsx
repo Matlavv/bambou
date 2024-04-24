@@ -14,8 +14,8 @@ const Header = () => {
               <Image
                 src="/img/tiktok.png"
                 alt="tiktok logo"
-                width={25}
-                height={25}
+                width={23}
+                height={23}
               />
             </Link>
           </li>
