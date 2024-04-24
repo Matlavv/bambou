@@ -20,8 +20,8 @@ const EcologicalLearning = () => {
             une différence pour la planète.
           </p>
         </div>
-        <div className="lg:flex lg:flex-row lg:space-x-4">
-          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+        <div className="lg:flex lg:flex-row lg:space-x-4 flex flex-col items-center gap-10">
+          <div className="lg:w-1/2 relative">
             <Image
               src={"/img/ARTICLE-COVER1.png"}
               height={250}
@@ -30,7 +30,7 @@ const EcologicalLearning = () => {
               className="rounded-xl"
             />
           </div>
-          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+          <div className="lg:w-1/2 relative">
             <Image
               src={"/img/ARTICLE-COVER2.png"}
               height={250}
@@ -39,7 +39,7 @@ const EcologicalLearning = () => {
               className="rounded-xl"
             />
           </div>
-          <div className="lg:w-1/2 flex flex-col justify-end p-4 my-4 relative">
+          <div className="lg:w-1/2 relative">
             <Image
               src={"/img/ARTICLE-COVER3.png"}
               height={250}
