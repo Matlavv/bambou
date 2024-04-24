@@ -1,9 +1,11 @@
+import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const JoinNewsletter = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleCheckboxChange = (event) => {
@@ -22,14 +24,35 @@ const JoinNewsletter = () => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     if (!isChecked || !isValidEmail(email)) {
       setError(true);
       setSuccessMessage("");
     } else {
-      setSuccessMessage("Merci de nous avoir rejoint !");
-      setError(false);
-      console.log("Soumission réussie avec l'email :", email);
+      setLoading(true);
+      const templateParams = {
+        user_email: email,
+      };
+
+      try {
+        const response = await emailjs.send(
+          "service_t49tsfi",
+          "template_sgbgt9c",
+          templateParams,
+          "gElU4SMnaa9enYE_h"
+        );
+        console.log("SUCCESS!", response.status, response.text);
+        setSuccessMessage("Merci de nous avoir rejoint !");
+        setError(false);
+      } catch (err) {
+        console.log("FAILED...", err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+
+      setEmail("");
     }
   };
 
@@ -38,7 +61,11 @@ const JoinNewsletter = () => {
   }`;
 
   return (
-    <div className="bg-deep-green mx-6 my-4 rounded-xl p-4" id="newsletter">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-deep-green mx-6 my-4 rounded-xl p-4"
+      id="newsletter"
+    >
       <h2 className="flex items-center justify-center text-cream font-bold text-5xl font-wak max-sm:text-center">
         Ne rate aucune info sur Bambou !
       </h2>
@@ -73,10 +100,7 @@ const JoinNewsletter = () => {
                   ? "accent-red-500 ring-2 ring-red-500"
                   : "accent-deep-green"
               }`}
-              style={{
-                backgroundColor: "transparent",
-                accentColor: "cream",
-              }}
+              style={{ backgroundColor: "transparent", accentColor: "cream" }}
             />
             <label
               htmlFor="subscribeCheckbox"
@@ -94,17 +118,16 @@ const JoinNewsletter = () => {
               {successMessage}
             </p>
           )}
-          <div className="max-sm:flex justify-center">
-            <button
-              onClick={handleSubmit}
-              className="bg-custom-orange text-deep-green rounded-full px-4 py-2 my-4 text-lg lg:text-xl font-gillSans"
-            >
-              S&apos;inscrire à la newsletter
-            </button>
-          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-custom-orange text-deep-green rounded-full px-4 py-2 my-4 text-lg lg:text-xl font-gillSans"
+          >
+            {loading ? "Envoi en cours..." : "S'inscrire à la newsletter"}
+          </button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
