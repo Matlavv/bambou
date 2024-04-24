@@ -15,7 +15,7 @@ const AppPresentation = () => {
             Rejoins une communauté engagée et gagne des récompenses tout en
             contribuant à un monde plus durable pour les générations futures !
           </p>
-          <div className="mt-10">
+          <div className="max-sm:flex justify-center mt-10">
             <Link href="#newsletter">
               <button className="bg-custom-orange text-deep-green font-gillSans rounded-full lg:px-4 px-2 py-2 text-base lg:text-xl">
                 Suivre l&apos;avancement de Bambou

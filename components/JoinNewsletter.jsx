@@ -94,12 +94,14 @@ const JoinNewsletter = () => {
               {successMessage}
             </p>
           )}
-          <button
-            onClick={handleSubmit}
-            className="bg-custom-orange text-deep-green rounded-full px-4 py-2 my-4 text-lg lg:text-xl font-gillSans max-sm:ml-6"
-          >
-            S&apos;inscrire à la newsletter
-          </button>
+          <div className="max-sm:flex justify-center">
+            <button
+              onClick={handleSubmit}
+              className="bg-custom-orange text-deep-green rounded-full px-4 py-2 my-4 text-lg lg:text-xl font-gillSans"
+            >
+              S&apos;inscrire à la newsletter
+            </button>
+          </div>
         </div>
       </div>
     </div>

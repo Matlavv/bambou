@@ -5,7 +5,7 @@ const Rewards = () => {
     // gagne des récompenses
     <div className="lg:flex lg:flex-row m-5 p-8 rounded-xl bg-deep-green items-center justify-center mt-10">
       {/* panda image */}
-      <div className="flex-shrink-0 max-sm:ml-7">
+      <div className="flex-shrink-0 max-sm:flex justify-center">
         <Image
           src={"/img/pandaSurprise.png"}
           width={200}
