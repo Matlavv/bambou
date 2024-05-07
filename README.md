@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed on Vercel
 
-[https://bambou-hazel.vercel.app](https://bambou-hazel.vercel.app)
+[https://bambou-app.fr]([https://bambou-hazel.vercel.app](https://www.bambou-app.fr))
