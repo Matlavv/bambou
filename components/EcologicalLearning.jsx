@@ -3,7 +3,7 @@ import Image from "next/image";
 const EcologicalLearning = () => {
   return (
     <div className="mt-8 p-10">
-      <h2 className="flex items-center justify-center text-5xl text-deep-green font-wak font-bold text-center">
+      <h2 className="flex items-center justify-center text-5xl lg:text-6xl text-deep-green font-wak font-bold text-center">
         Être écolo, ça s&apos;apprend !
       </h2>
       <div className="grid lg:grid-cols-2 mt-12 gap-4">
