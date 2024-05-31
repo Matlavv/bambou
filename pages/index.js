@@ -11,12 +11,13 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <AppPresentation />
-      <GoToAction />
-      <HowItWorks />
-      <Rewards />
-      <EcologicalLearning />
-      <JoinNewsletter />
+      <div className="lg:px-20 px-5">
+        <AppPresentation />
+        <GoToAction />
+        <Rewards />
+        <EcologicalLearning />
+        <JoinNewsletter />
+      </div>
       <Footer />
     </div>
   );
