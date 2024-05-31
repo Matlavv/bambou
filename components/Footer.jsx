@@ -8,17 +8,17 @@ const Footer = () => {
         <Image src={"/img/logo.png"} width={150} height={150} alt="logo" />
       </div>
       <nav className="mt-7 lg:mt-0 lg:ml-10">
-        <Link href="/about">
+        <Link href="/Legal/LegalNotice">
           <p className="text-deep-green font-gillSans my-2 text-center lg:text-left">
             Mentions légales
           </p>
         </Link>
-        <Link href="/about">
+        <Link href="/Legal/UseCondition">
           <p className="text-deep-green font-gillSans my-2 text-center lg:text-left">
             Conditions d&apos;utilisation
           </p>
         </Link>
-        <Link href="/about">
+        <Link href="/Legal/PrivacyPolicy">
           <p className="text-deep-green font-gillSans my-2 text-center lg:text-left">
             Politique de confidentialité
           </p>
