@@ -15,6 +15,7 @@ export default function Home() {
         <AppPresentation />
         <GoToAction />
         <Rewards />
+        <HowItWorks />
         <EcologicalLearning />
         <JoinNewsletter />
       </div>
